@@ -20,4 +20,4 @@ pipeline = Pipeline(
     steps=pipeline_steps,
 )
 
-pipeline.upsert(role_arn=global_config.common.role_arn)
+pipeline.upsert(role=global_config.common.role)

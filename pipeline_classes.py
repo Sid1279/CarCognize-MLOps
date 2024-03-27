@@ -36,7 +36,7 @@ class ProcessingStage(PipelineStage):
             estimator_cls=PyTorch,
             framework_version=self.config.processor.framework_version,
             py_version=self.config.processor.py_version,
-            role=self.config.role_arn,
+            role=self.config.role,
             instance_count=self.config.processor.instance_count,
             instance_type=self.config.processor.instance_type,
             max_runtime_in_seconds=self.config.processor.max_runtime_in_seconds,
@@ -86,7 +86,7 @@ class TrainingStage(PipelineStage):
             py_version=self.config.py_version,
             instance_type=self.config.instance_type,
             instance_count=self.config.instance_count,
-            role=self.config.role_arn,
+            role=self.config.role,
             script_mode=True,
             hyperparameters=hyperparameters
         )
@@ -120,7 +120,7 @@ class DeploymentStage(PipelineStage):
             estimator_cls=PyTorch,
             framework_version=self.config.processor.framework_version,
             py_version=self.config.processor.py_version,
-            role=self.config.role_arn,
+            role=self.config.role,
             instance_count=self.config.processor.instance_count,
             instance_type=self.config.processor.instance_type,
             max_runtime_in_seconds=self.config.processor.max_runtime_in_seconds,
