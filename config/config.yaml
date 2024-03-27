@@ -1,11 +1,14 @@
-a_preprocess:
+common:
+  image: python:3.7
+
+preprocess:
+  step_name: "Preprocessing"
   stage: 1
 
-b_train:
+train:
+  step_name: "Training"
   stage: 2
 
-c_test:
+deploy:
+  step_name: "Deployment"
   stage: 3
-
-d_deploy:
-  stage: 4
