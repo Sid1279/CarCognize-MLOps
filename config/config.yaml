@@ -1,0 +1,11 @@
+a_preprocess:
+  stage: 1
+
+b_train:
+  stage: 2
+
+c_test:
+  stage: 3
+
+d_deploy:
+  stage: 4
