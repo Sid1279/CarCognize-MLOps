@@ -1,4 +1,5 @@
 # Car Model Classifier built using PyTorch, deployed via AWS SageMaker 🚗
+### Updates to README coming soon
 
 ## Pipeline
 <img src="artifacts/Pipeline.png" alt="Pipeline" width="30%" height="auto">
