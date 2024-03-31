@@ -5,7 +5,7 @@ common:
   region: "us-east-1"
 
 preprocess:
-  step_name: "Preprocessing"
+  step_name: "Process"
   stage:
     dataset_url: "https://www.kaggle.com/jutrera/stanford-car-dataset-by-classes-folder"
     train_dir: "stanford-car-dataset-by-classes-folder/car_data/car_data/train"
@@ -14,7 +14,7 @@ preprocess:
     data_test_dir: "test/"
 
 train:
-  step_name: "Training"
+  step_name: "Train"
   stage:
     epochs: 10
     batch_size: 32
@@ -22,7 +22,7 @@ train:
     model_name: "stanford_cars"
 
 deploy:
-  step_name: "Deployment"
+  step_name: "Deploy"
   stage:
     framework_version: "1.8.1"
     py_version: "py3"
