@@ -1,14 +1,32 @@
 common:
   image: python:3.7
+  role: "arn:aws:iam::_______________________"  # not gonna expose ;)
+  bucket: "sagemaker-stanford-cars"
+  region: "us-east-1"
 
 preprocess:
   step_name: "Preprocessing"
-  stage: 1
+  stage:
+    dataset_url: "https://www.kaggle.com/jutrera/stanford-car-dataset-by-classes-folder"
+    train_dir: "stanford-car-dataset-by-classes-folder/car_data/car_data/train"
+    test_dir: "stanford-car-dataset-by-classes-folder/car_data/car_data/test"
+    data_train_dir: "train/"
+    data_test_dir: "test/"
 
 train:
   step_name: "Training"
-  stage: 2
+  stage:
+    epochs: 10
+    batch_size: 32
+    learning_rate: 0.001
+    model_name: "stanford_cars"
 
 deploy:
   step_name: "Deployment"
-  stage: 3
+  stage:
+    framework_version: "1.8.1"
+    py_version: "py3"
+    entry_script: "inference.py"
+    endpoint_name: "stanford-cars-endpoint"
+    initial_instance_count: 1
+    instance_type: "ml.m5.large"

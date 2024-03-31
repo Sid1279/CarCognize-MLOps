@@ -3,13 +3,10 @@ FROM 763104351884.dkr.ecr.us-east-1.amazonaws.com/pytorch-inference:1.6.0-cpu-py
 
 RUN pip install requirements.txt
 
-WORKDIR /sagemaker_workspace
+WORKDIR /app
 
-COPY . /sagemaker_workspace
+COPY . /app
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["python", "build_pipeline.py"]
-
