@@ -1,4 +1,4 @@
-# Car Model Classifier built using PyTorch, deployed via AWS SageMaker 🚗
+# The most powerful car classifier out there 🚗
 ### Updates to README coming soon
 
 ## Pipeline
