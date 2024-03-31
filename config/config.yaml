@@ -1,6 +1,6 @@
 common:
   image: python:3.7
-  role: "arn:aws:iam::_______________________"  # not gonna expose ;)
+  role: "arn:aws:iam::[]"  # not gonna expose ;)
   bucket: "sagemaker-stanford-cars"
   region: "us-east-1"
 
